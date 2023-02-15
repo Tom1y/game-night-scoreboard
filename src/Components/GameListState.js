@@ -16,6 +16,11 @@ class Game {
   }
 
   addPlayer(name) {
+    for (let player of this.players) {
+      if (player.name === name) {
+        return;
+      }
+    }
     this.players.push({ name: name, played: 0, wins: 0 });
   }
 }
@@ -27,26 +32,8 @@ class GameList {
     makeAutoObservable(this);
   }
 
-  totalGames() {
-    return this.games.length;
-  }
-
   createGame(game) {
     this.games.push(game);
-  }
-
-  updateGame(gameId, update) {
-    const gameIndexAtId = this.games.findIndex((game) => game.id === gameId);
-    if (gameIndexAtId > -1 && update) {
-      this.games[gameIndexAtId] = update;
-    }
-  }
-
-  deleteGame(gameId) {
-    const gameIndexAtId = this.games.findIndex((game) => game.id === gameId);
-    if (gameIndexAtId > -1) {
-      this.games.splice(gameIndexAtId, 1);
-    }
   }
 }
 
