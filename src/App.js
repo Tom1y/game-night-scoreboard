@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar";
-import MyGames from "./Components/MyGames";
+import GameDetail from "./Components/GameDetail";
 import GameList from "./Components/GameList";
 import gameListState from "./Components/GameListState";
 
@@ -12,7 +12,11 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<GameList state={gameListState} />} />
-        <Route exact path="/myGames" element={<MyGames />} />
+        <Route
+          exact
+          path="/gameDetail/:id"
+          element={<GameDetail state={gameListState} />}
+        />
       </Routes>
     </Router>
   );
