@@ -12,6 +12,32 @@ function GameDetails(props) {
     game.addPlayer(e.target.player.value);
   }
 
+  function addWins(name) {
+    let player = game.players.find((element) => element.name === name);
+    player.wins++;
+  }
+
+  function decreaseWins(name) {
+    let player = game.players.find((element) => element.name === name);
+    player.wins--;
+  }
+
+  function increaseNumOfGamesPlayed(name) {
+    let player = game.players.find((element) => element.name === name);
+    player.played++;
+  }
+
+  function decreaseNumOfGamesPlayed(name) {
+    let player = game.players.find((element) => element.name === name);
+    player.played--;
+  }
+
+  function removePlayer(name) {
+    let player = game.players.find((element) => element.name === name);
+    let index = game.players.indexOf(player);
+    game.players.splice(index, 1);
+  }
+
   return (
     <div className="gameDetail">
       <table>
@@ -20,13 +46,31 @@ function GameDetails(props) {
             <th>{game.name}</th>
             <th>num. of games played</th>
             <th>wins</th>
+            <th></th>
           </tr>
           {game.players.map((player) => {
             return (
               <tr key={player.name}>
                 <th>{player.name}</th>
-                <th>{player.played}</th>
-                <th>{player.wins}</th>
+                <th>
+                  {player.played}{" "}
+                  <button onClick={() => decreaseNumOfGamesPlayed(player.name)}>
+                    -
+                  </button>
+                  <button onClick={() => increaseNumOfGamesPlayed(player.name)}>
+                    +
+                  </button>
+                </th>
+                <th>
+                  {player.wins}{" "}
+                  <button onClick={() => decreaseWins(player.name)}>-</button>
+                  <button onClick={() => addWins(player.name)}>+</button>
+                </th>
+                <th>
+                  <button onClick={() => removePlayer(player.name)}>
+                    remove player
+                  </button>
+                </th>
               </tr>
             );
           })}
