@@ -1,5 +1,4 @@
 import { observer } from "mobx-react-lite";
-import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./GameList.css";
 
@@ -9,7 +8,16 @@ function GameList(props) {
   function pageRedirect(id) {
     navigate(`/gameDetail/${id}`);
   }
-  // console.log(props.state);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    props.state.newGame(
+      e.target.game.value,
+      e.target.heroImgUrl.value,
+      e.target.detailPageUrl.value
+    );
+  }
+
   return (
     <>
       {props.state.games.map((game) => {
@@ -24,6 +32,17 @@ function GameList(props) {
           </div>
         );
       })}
+      <h3>Add game</h3>
+      <form onSubmit={handleSubmit}>
+        <input type="text" name="game" placeholder="name of the game"></input>
+        <input type="text" name="heroImgUrl" placeholder="add img url"></input>
+        <input
+          type="text"
+          name="detailPageUrl"
+          placeholder="add detail page url"
+        ></input>
+        <button>Add game</button>
+      </form>
     </>
   );
 }

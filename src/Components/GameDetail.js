@@ -1,4 +1,3 @@
-import { observable } from "mobx";
 import React from "react";
 import { useParams } from "react-router-dom";
 import { observer } from "mobx-react-lite";
