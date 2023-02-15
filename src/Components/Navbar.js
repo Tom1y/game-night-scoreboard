@@ -8,7 +8,6 @@ export default function Navbar() {
       <h2>KajSeŠPILA</h2>
       <ul className="navbarLinks">
         <Link to="/">Domov</Link>
-        <Link to="/myGames">Moje Igre</Link>
       </ul>
     </div>
   );

@@ -3,8 +3,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
-  background-color: #83c5be;
-  color: #006d77;
+  background-color: #006d77;
+  color: #edf6f9;
 }
 
 .navbarLinks {
@@ -16,5 +16,5 @@
 
 .navbarLinks a {
   text-decoration: none;
-  color: #006d77;
+  color: #edf6f9;
 }
