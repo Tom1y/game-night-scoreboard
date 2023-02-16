@@ -5,7 +5,9 @@ import "./Navbar.css";
 export default function Navbar() {
   return (
     <div className="navbar">
-      <h2>KajSeŠPILA</h2>
+      <Link to="/" className="navbarLogo">
+        <h2>KajSeŠPILA</h2>
+      </Link>
       <ul className="navbarLinks">
         <Link to="/">Domov</Link>
       </ul>

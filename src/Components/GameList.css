@@ -6,6 +6,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  padding: 0.5rem 1rem 1rem 1rem;
+  -webkit-box-shadow: 2px 1px 6px 1px rgba(0, 109, 119, 1);
+  -moz-box-shadow: 2px 1px 6px 1px rgba(0, 109, 119, 1);
+  box-shadow: 2px 1px 6px 1px rgba(0, 109, 119, 1);
 }
 
 .gameCard img {
@@ -13,4 +18,74 @@
   max-height: 12rem;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+}
+
+.gameCard h2 {
+  /* padding: 0.1rem 2rem; */
+  color: black;
+}
+
+.gameCard p {
+  width: 70%;
+}
+
+.gameCard button {
+  background-color: #e29578;
+  margin: 0.5rem 1rem;
+  padding: 0.3rem 0.5rem;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  border: none;
+  transition-duration: 0.4s;
+}
+
+.gameCard button:hover {
+  background-color: #ffddd2;
+}
+
+.gameCard a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ADD GAME */
+
+.addGameCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  background-color: #e29578;
+  margin: 1rem 1rem;
+  padding-top: 1rem;
+  border-radius: 5px;
+}
+
+.addGameForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.addGameForm input {
+  background-color: #ffddd2;
+}
+
+.addGameForm button {
+  background-color: #83c5be;
+  margin: 0.5rem 1rem;
+  padding: 0.3rem 0.5rem;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  border: none;
+  transition-duration: 0.4s;
+}
+
+.addGameForm button:hover {
+  background-color: #006d77;
 }

@@ -14,7 +14,8 @@ function GameList(props) {
     props.state.newGame(
       e.target.game.value,
       e.target.heroImgUrl.value,
-      e.target.detailPageUrl.value
+      e.target.detailPageUrl.value,
+      e.target.description.value
     );
   }
 
@@ -22,27 +23,43 @@ function GameList(props) {
     <>
       {props.state.games.map((game) => {
         return (
-          <div
-            className="gameCard"
-            onClick={() => pageRedirect(game.id)}
-            key={game.id}
-          >
+          <div className="gameCard" key={game.id}>
             <h2>{game.name}</h2>
             <img src={game.heroImgUrl} alt="hero img"></img>
+            <p>{game.description}</p>
+            <div>
+              <button>
+                <a href={game.detailPageUrl} target="_blank">
+                  game page
+                </a>
+              </button>
+              <button onClick={() => pageRedirect(game.id)}>scoreboard</button>
+            </div>
           </div>
         );
       })}
-      <h3>Add game</h3>
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="game" placeholder="name of the game"></input>
-        <input type="text" name="heroImgUrl" placeholder="add img url"></input>
-        <input
-          type="text"
-          name="detailPageUrl"
-          placeholder="add detail page url"
-        ></input>
-        <button>Add game</button>
-      </form>
+      <div className="addGameCard">
+        <h3>Add game</h3>
+        <form onSubmit={handleSubmit} className="addGameForm">
+          <input type="text" name="game" placeholder="name of the game"></input>
+          <input
+            type="text"
+            name="heroImgUrl"
+            placeholder="add img url"
+          ></input>
+          <input
+            type="text"
+            name="description"
+            placeholder="short game description"
+          ></input>
+          <input
+            type="text"
+            name="detailPageUrl"
+            placeholder="add detail page url"
+          ></input>
+          <button>Add game</button>
+        </form>
+      </div>
     </>
   );
 }
