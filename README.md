@@ -11,7 +11,7 @@ In the scoreboard section you can track the players, add or remove players and t
 
 ## future ideas
 
-add view and edit game details, for some specific info
-add state saving using local storage so you can track your games and scores without losing your data
-add API call for searching board games or adding them to your list much easier
-add notes to the scoreboard so you can write down maybe something interesting that happened during your play time with friends
+-add view and edit game details, for some specific info.
+-add state saving using local storage so you can track your games and scores without losing your data.
+-add API call for searching board games or adding them to your list much easier.
+-add notes to the scoreboard so you can write down maybe something interesting that happened during your play time with friends.
