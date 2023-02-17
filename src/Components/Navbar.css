@@ -4,7 +4,7 @@
   align-items: center;
   padding: 0.5rem 1rem;
   background-color: #006d77;
-  color: #edf6f9;
+  color: #f07167;
 }
 
 .navbarLinks {
@@ -16,10 +16,10 @@
 
 .navbarLinks a {
   text-decoration: none;
-  color: #edf6f9;
+  color: #000814;
 }
 
 .navbarLogo {
   text-decoration-line: none;
-  color: #edf6f9;
+  color: black;
 }

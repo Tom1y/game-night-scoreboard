@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { observer } from "mobx-react-lite";
+import "./GameDetail.css";
 
 function GameDetails(props) {
   let { id } = useParams();
@@ -40,11 +41,19 @@ function GameDetails(props) {
 
   return (
     <div className="gameDetail">
+      <div className="gameDetailInfo">
+        <img
+          src={game.heroImgUrl}
+          className="gameDetailImg"
+          alt="game img"
+        ></img>
+        <h2>{game.name}</h2>
+      </div>
       <table>
         <tbody>
           <tr>
-            <th>{game.name}</th>
-            <th>num. of games played</th>
+            <th>players</th>
+            <th>games played</th>
             <th>wins</th>
             <th></th>
           </tr>
@@ -76,8 +85,8 @@ function GameDetails(props) {
           })}
         </tbody>
       </table>
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="player"></input>
+      <form onSubmit={handleSubmit} className="gameDetailAddPlayer">
+        <input type="text" name="player" placeholder="player name"></input>
         <button>Add player</button>
       </form>
     </div>
