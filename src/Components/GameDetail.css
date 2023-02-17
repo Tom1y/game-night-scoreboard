@@ -31,6 +31,12 @@ tr {
   -webkit-box-shadow: 2px 1px 6px 1px #00afb9;
   -moz-box-shadow: 2px 1px 6px 1px #00afb9;
   box-shadow: 2px 1px 6px 1px #00afb9;
+  font-weight: 500;
+}
+
+.thTitle {
+  font-weight: bold;
+  color: #f07167;
 }
 
 tbody button {
@@ -39,7 +45,6 @@ tbody button {
   color: black;
   font-size: small;
   border-radius: 10px;
-
   margin: 0.1rem;
   transition: 0.4s;
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
@@ -70,4 +75,33 @@ tbody button:hover {
 
 .gameDetailAddPlayer button:hover {
   background-color: #00afb9;
+}
+
+@media (min-width: 1000px) {
+  .gameDetailInfo {
+    align-self: flex-start;
+    justify-content: flex-start;
+  }
+
+  .gameDetailInfo img {
+    max-height: 20rem;
+    max-width: 40%;
+  }
+
+  .gameDetailInfo h2 {
+    font-size: 2.5rem;
+    margin-bottom: -1rem;
+  }
+
+  .gameDetailAddPlayer {
+    justify-content: flex-start;
+  }
+  .gameDetailAddPlayer input {
+    width: 20%;
+  }
+
+  .gameDetail {
+    width: 95%;
+    margin: 1rem auto;
+  }
 }

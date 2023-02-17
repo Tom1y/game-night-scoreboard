@@ -92,3 +92,24 @@
 .addGameForm button:hover {
   background-color: #006d77;
 }
+
+@media (min-width: 1000px) {
+  .gameCard {
+    max-width: 43%;
+    display: flex;
+  }
+
+  .gameCardsLayout {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .addGameCard {
+    margin-bottom: 4rem;
+  }
+
+  .addGameForm {
+    display: flex;
+    flex-direction: row;
+  }
+}

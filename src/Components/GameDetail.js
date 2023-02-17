@@ -51,7 +51,7 @@ function GameDetails(props) {
       </div>
       <table>
         <tbody>
-          <tr>
+          <tr className="thTitle">
             <th>players</th>
             <th>games played</th>
             <th>wins</th>

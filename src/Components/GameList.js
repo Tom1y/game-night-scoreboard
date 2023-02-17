@@ -21,23 +21,27 @@ function GameList(props) {
 
   return (
     <>
-      {props.state.games.map((game) => {
-        return (
-          <div className="gameCard" key={game.id}>
-            <h2>{game.name}</h2>
-            <img src={game.heroImgUrl} alt="hero img"></img>
-            <p>{game.description}</p>
-            <div>
-              <button>
-                <a href={game.detailPageUrl} target="_blank">
-                  game page
-                </a>
-              </button>
-              <button onClick={() => pageRedirect(game.id)}>scoreboard</button>
+      <div className="gameCardsLayout">
+        {props.state.games.map((game) => {
+          return (
+            <div className="gameCard" key={game.id}>
+              <h2>{game.name}</h2>
+              <img src={game.heroImgUrl} alt="hero img"></img>
+              <p>{game.description}</p>
+              <div>
+                <button>
+                  <a href={game.detailPageUrl} target="_blank">
+                    game page
+                  </a>
+                </button>
+                <button onClick={() => pageRedirect(game.id)}>
+                  scoreboard
+                </button>
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
       <div className="addGameCard">
         <h3>Add game</h3>
         <form onSubmit={handleSubmit} className="addGameForm">
